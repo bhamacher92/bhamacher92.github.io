@@ -20,23 +20,24 @@ logo-icon-SEO: "/assets/img/branding/blogicon.png" # must be a non SVG file
 # the browser is closed or not)
 night_mode: "auto"
 
-logo-dark: "/assets/img/branding/bloglogo.svg"
+logo-dark: "/assets/img/branding/bloglogo_dark.svg"
 highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
 
 # Author settings
 author: Bastian Hamacher # add your name
-author-pic: Myself_Neon_grey.jpg
+author-pic: bastian-hamacher-full.jpg
 about-author: Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
 
 # Contact links
-email: armando.maynez@gmail.com # Add your Email address
+email: bastian.hamacher@hotmail.com # Add your Email address
 phone: # Add your Phone number
 website: https://bhamacher92.github.io # Add your website
-linkedin: amaynez # Add your Linkedin handle
-github: amaynez # Add your Github handle
-twitter: '@MvmThe' # Add your Twitter handle
-bandcamp: armandomaynez # Add your Bandcamp username
-stackoverflow: stackoverflow # Add your stackoverflow account
+#linkedin: amaynez # Add your Linkedin handle
+xing: Bastian_Hamacher
+github: bhamacher92 # Add your Github handle
+#twitter: '@MvmThe' # Add your Twitter handle
+#bandcamp: armandomaynez # Add your Bandcamp username
+#stackoverflow: stackoverflow # Add your stackoverflow account
 
 # Newsletter
 mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
