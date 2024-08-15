@@ -2,10 +2,10 @@
 layout: post
 read_time: true
 show_date: true
-title:  Loosely Coupled Architectures
-date:   2024-08-16 08:32:20 0000
+title:  Loosely Coupled Architectures (ai template)
+date:   2024-08-14 08:32:20 0000
 description: Just a test
-img: posts/20240608/test.jpg 
+img: posts/common/QUALITY_MAINTAINABILITY.png 
 tags: [test]
 author: Bastian Hamacher
 github:  bhamacher92
