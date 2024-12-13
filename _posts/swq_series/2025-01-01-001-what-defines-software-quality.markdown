@@ -65,6 +65,6 @@ In following articles, we will take a closer look at the individual criteria and
 
 ### Where to go from here
 
-- [Maintainability]({% post_url swq_series/2025-01-01-002-maintainability-goals %})
-- [Compatibility]({% post_url swq_series/2025-01-01-003-compatibility-goals %})
-- [Flexibility]({% post_url swq_series/2025-01-01-004-flexibility-goals %})
+- [Maintainability]({% post_url swq_series/2025-01-01-002-maintainability-traits %})
+- [Compatibility]({% post_url swq_series/2025-01-01-003-compatibility-traits %})
+- [Flexibility]({% post_url swq_series/2025-01-01-004-flexibility-traits %})

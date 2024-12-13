@@ -14,7 +14,7 @@ mathjax: yes
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines maintainability as one of the nine key quality attributes for software. It further breaks down maintainability into five subcategories:
+**ISO/IEC 25010** defines maintainability as one of the nine key quality attributes for software. It further breaks down maintainability into five sub-traits:
 
 ### Modularity
 The degree to which a system or computer program is composed of discrete components such that a change to one component has minimal impact on other components.
@@ -72,5 +72,5 @@ Maintainability is a cornerstone of high-quality software development, ensuring 
 
 
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-003-compatibility-goals %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-003-compatibility-traits %})** 
 

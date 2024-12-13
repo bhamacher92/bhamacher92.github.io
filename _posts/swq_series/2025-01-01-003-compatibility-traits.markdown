@@ -10,11 +10,13 @@ tags: [Software Quality Series]
 author: Bastian Hamacher
 github:  bhamacher92
 mathjax: yes
+mermaid: true
 ---
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-ISO/IEC 25010 defines compatibility as one of the nine key quality attributes for software. It further breaks down compatibility into two subcategories:Compared to the last article about maintainability, the subcategories here are not as easily understood. Therefore, I will go into more detail and not strictly adhere to the ISO/IEC 25010 definitions.
+ISO/IEC 25010 defines compatibility as one of the nine key quality attributes for software. It further breaks down compatibility into two sub-traits.\\
+Compared to the last article about maintainability, the subcategories here are not as easily understood. Therefore, I will go into more detail and not strictly adhere to the ISO/IEC 25010 definitions.
 
 ### Co-Existence
 
@@ -36,7 +38,19 @@ Let’s explain interoperability with a simple example: music. Imagine creating 
 
 ## How to Improve Compatibility
 
-The requirements for compatibility vary significantly depending on the specific system. However, some general strategies can help address compatibility challenges:
+The requirements for compatibility vary significantly depending on the specific system. However, there are some common problems that can be easily tackled. 
+
+### Shared Dependencies
+
+Sharing Dependencies as described above can easily be tackled by using dependencies with concrete versions. Unlike in the early versions of windows it is no problem to use multiple version of the same library. Today windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to solve this problem. Linux never had this issue since linux uses a very simple strategy to support concrete and canonical versions of one dependency. 
+
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
 
 ### Assess Dependencies Early
 
@@ -66,4 +80,4 @@ Where possible, rely on open standards rather than proprietary formats. This enh
 
 Engage with the developer community, partners, or other stakeholders to align on interoperability needs. Collaborative approaches can help ensure broader compatibility and better support for shared ecosystems.
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-002-maintainability-goals %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-004-flexibility-goals %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-002-maintainability-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-004-flexibility-traits %})** 
