@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  finding user stories (ai template)
-date:   2024-08-14 08:32:20 0000
+date:   2100-08-14 08:32:20 0000
 description: Just a test
 img: posts/common/ARCHITECTURE_AND_DESIGN.png 
 tags: [test]

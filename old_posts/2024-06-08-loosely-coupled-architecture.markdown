@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Loosely Coupled Architectures (ai template)
-date:   2024-08-14 08:32:20 0000
+date:   2100-08-14 08:32:20 0000
 description: Just a test
 img: posts/common/QUALITY_MAINTAINABILITY.png 
 tags: [test]
