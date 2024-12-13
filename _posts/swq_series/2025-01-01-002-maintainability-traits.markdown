@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Maintainability Goals
+title:  Maintainability Traits
 date:   2024-01-01 08:32:20 0000
 description: Just a test
 img: posts/common/QUALITY_MAINTAINABILITY.png 

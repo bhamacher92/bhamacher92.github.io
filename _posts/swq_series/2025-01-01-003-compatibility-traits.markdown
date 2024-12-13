@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Compatibility Goals
+title:  Compatibility Traits
 date:   2024-01-01 08:32:20 0000
 description: Just a test
 img: posts/common/QUALITY_COMPATIBILITY.png 
@@ -42,42 +42,35 @@ The requirements for compatibility vary significantly depending on the specific 
 
 ### Shared Dependencies
 
-Sharing Dependencies as described above can easily be tackled by using dependencies with concrete versions. Unlike in the early versions of windows it is no problem to use multiple version of the same library. Today windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to solve this problem. Linux never had this issue since linux uses a very simple strategy to support concrete and canonical versions of one dependency. 
+Sharing Dependencies as described above can easily be tackled by using dependencies with concrete versions. Unlike in the early versions of windows it is no problem to use multiple version of the same library. Today windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to solve this problem. Linux never had this issue since linux uses a very simple strategy to support concrete and canonical versions of one dependency. Linux provides libs with major, minor and path version and symlinks to them as shown below. Each application can decide for itself how precise the version has to match.
 
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+<div class="mermaid" style="background-color: lightgray;">
+graph LR
+
+    libA.so.2 -->|symlink| libA.so.2.1
+    libA.so.2.1 -->|symlink| libA.so.2.1.1 
+    libA -->|symlink| libA.so.3
+    libA.so.3 -->|symlink| libA.so.3.1
+    libA.so.3.1 -->|symlink| libA.so.3.1.2
+    libA.so.3.1.0
+
+    App1 -->|depends on| libA.so.3.1
+    App2 -->|depends on| libA.so.3.1.0
 </div>
 
-### Assess Dependencies Early
+A more modern and powerful approach is decouple dependencies entirely using containers.
+A container is an isolated environment with its own filesystem. Systems like docker use [chroot](https://linux.die.net/man/1/chroot) 
+to create an isolated artificial filesystem and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html) to ensure process isolation. Preventing conflicts by separating the applications and files entirely. This approach is not suitable in all environments, as it runs only on linux systems natively and adds a lot of complexity for gui applications. 
 
-Identify and manage dependencies between software components or external libraries early in the development process. Consider adopting versioning strategies such as semantic versioning to reduce conflicts when dependencies evolve.
+### Compatible APIs
 
-### Standardize Communication Protocols
+Providing compatibility with as many external systems as possible cna be desirable as it can be 
+unwanted (Vendor Lock). A good example for compatibility is [HTTP](https://en.wikipedia.org/wiki/HTTP). A protocol that is used in all browsers. Adhering to like european norms or defacto  standards like REST where possible improves interoperability and additionally adds a chance of code reusability. 
 
-Use standard protocols and data formats (e.g., REST APIs, JSON, XML) to improve interoperability. This ensures that your software can communicate effectively with other systems, even those developed independently.
+## Conclusion
 
-### Embrace Modular Design
+Compatibility covers a variety of challenges which heavily depend on the specific application. 
+It is impossible to provide a general set of possible problems and solutions. Compatibility can be desirable or unwanted depending on the business goals (Though we should not lie to ourself. For the customer it's usually better if the system is as compatible as possible). In the end it is important to invest thought into this quality criteria and decide on the required measures.
 
-Design your system with modularity in mind. Isolate components to ensure changes in one module have minimal impact on others, improving co-existence.
-
-### Implement Backward Compatibility
-
-For products with evolving features, ensure that new versions can work with older systems or data formats. Backward compatibility minimizes disruption for existing users.
-
-### Test in Realistic Environments
-
-Simulate production-like environments to identify and address potential co-existence issues. For example, testing your application with other common applications or on resource-constrained systems can reveal hidden conflicts.
-
-### Promote Open Standards
-
-Where possible, rely on open standards rather than proprietary formats. This enhances interoperability and ensures that your software remains adaptable to future technologies.
-
-### Foster Collaboration
-
-Engage with the developer community, partners, or other stakeholders to align on interoperability needs. Collaborative approaches can help ensure broader compatibility and better support for shared ecosystems.
 
 **[<- Pervious article in this series]({% post_url swq_series/2025-01-01-002-maintainability-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-004-flexibility-traits %})** 
