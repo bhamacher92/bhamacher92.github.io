@@ -15,34 +15,34 @@ mermaid: true
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-ISO/IEC 25010 defines compatibility as one of the nine key quality attributes for software. It further breaks down compatibility into two sub-traits.\\
-Compared to the last article about maintainability, the subcategories here are not as easily understood. Therefore, I will go into more detail and not strictly adhere to the ISO/IEC 25010 definitions.
+ISO/IEC 25010 defines compatibility as one of the nine key quality attributes for software, breaking it down into two sub-traits. \\
+Compared to the last article on maintainability, the subcategories of compatibility are less intuitive, so I will explain them in more detail and not strictly adhere to the ISO/IEC 25010 definitions.
 
 ### Co-Existence
 
-The degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.
+Co-existence refers to the ability of a product to perform its required functions efficiently while sharing a common environment and resources with other products, without negatively impacting any other product. 
 
-A good example of co-existence is when two applications run on the same system and depend on the same library. If both systems use the same version of the library, everything works fine. However, if they require different versions, conflicts can occur.
+An example of co-existence is when two applications run on the same system and rely on the same library. If both applications use the same version of the library, everything works as expected. However, if they need different versions of the library, conflicts can arise. 
 
-Another example could be a real-time environment where multiple processes run on the same machine. All processes must execute within their assigned time limits. Adding a new process might alter time behavior, potentially causing the system to breach these time constraints.
+Another example could involve real-time environments where multiple processes run on the same machine. Each process must meet its time constraints, so adding a new process could potentially disrupt time behavior and cause the system to exceed its limits.
 
-These examples are oversimplified but aim to illustrate the wide variety of challenges associated with co-existing software.
+These are simplified examples, but they demonstrate the wide range of challenges involved in ensuring co-existence between software.
 
 ### Interoperability
 
-The degree to which a system, product, or component can exchange information with other products and mutually use the information that has been exchanged.
+Interoperability is the ability of a system, product, or component to exchange information with other products and mutually use the exchanged information.
 
-This requirement seems straightforward, but why is it a problem? It depends on the context. In my career, much of the software I developed was highly specialized, and interoperability was not a significant issue. However, reflecting on it, even a small investment in interoperability considerations could have resulted in more user-friendly and flexible outcomes.
+This requirement may seem simple, but it can be problematic depending on the context. In my career, much of the software I developed was highly specialized, and interoperability wasn't a major concern. However, reflecting on it, even a small investment in interoperability considerations could have led to more flexible and user-friendly outcomes.
 
-Let’s explain interoperability with a simple example: music. Imagine creating a music player with a proprietary file format. The software would be of limited utility because, without broader support for this format, users would be unable to play most music files. It’s as simple as that.
+Let's use this simple example to understand interoperability better. Imagine creating a music player with a proprietary file format. The software would be of limited use because without broader support for that format, users wouldn’t be able to play any music files. It's as simple as that.
 
 ## How to Improve Compatibility
 
-The requirements for compatibility vary significantly depending on the specific system. However, there are some common problems that can be easily tackled. 
+The requirements for compatibility vary depending on the system, but there are common problems that can be addressed.
 
 ### Shared Dependencies
 
-Sharing Dependencies as described above can easily be tackled by using dependencies with concrete versions. Unlike in the early versions of windows it is no problem to use multiple version of the same library. Today windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to solve this problem. Linux never had this issue since linux uses a very simple strategy to support concrete and canonical versions of one dependency. Linux provides libs with major, minor and path version and symlinks to them as shown below. Each application can decide for itself how precise the version has to match.
+Shared dependencies can be tackled by using dependencies with concrete versions. Unlike in early versions of Windows, it's now easy to use multiple versions of the same library. Modern Windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to handle this issue. Linux never had this problem because it uses a simple strategy to support both concrete and canonical versions of dependencies. It provides libraries with major, minor, and patch versions, and symlinks to them as shown below. Each application can decide how precisely the version needs to match.
 
 <div class="mermaid" style="background-color: lightgray;">
 graph LR
@@ -58,19 +58,14 @@ graph LR
     App2 -->|depends on| libA.so.3.1.0
 </div>
 
-A more modern and powerful approach is decouple dependencies entirely using containers.
-A container is an isolated environment with its own filesystem. Systems like docker use [chroot](https://linux.die.net/man/1/chroot) 
-to create an isolated artificial filesystem and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html) to ensure process isolation. Preventing conflicts by separating the applications and files entirely. This approach is not suitable in all environments, as it runs only on linux systems natively and adds a lot of complexity for gui applications. 
+A more modern and powerful approach is to decouple dependencies entirely using containers. A container is an isolated environment with its own filesystem. Systems like Docker use [chroot](https://linux.die.net/man/1/chroot) to create isolated artificial filesystems and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html) for process isolation. This prevents conflicts by completely separating applications and their files. However, this approach is not suitable for all environments, as it only works natively on Linux systems and can add complexity, particularly for GUI applications.
 
 ### Compatible APIs
 
-Providing compatibility with as many external systems as possible cna be desirable as it can be 
-unwanted (Vendor Lock). A good example for compatibility is [HTTP](https://en.wikipedia.org/wiki/HTTP). A protocol that is used in all browsers. Adhering to like european norms or defacto  standards like REST where possible improves interoperability and additionally adds a chance of code reusability. 
+Providing compatibility with a wide range of external systems can be beneficial, but sometimes it might be unwanted (Vendor lock). A good example of compatibility is [HTTP](https://en.wikipedia.org/wiki/HTTP), a protocol supported by all browsers. Adhering to established standards, such as European norms or widely used protocols like REST, improves interoperability and also promotes code reusability.
 
 ## Conclusion
 
-Compatibility covers a variety of challenges which heavily depend on the specific application. 
-It is impossible to provide a general set of possible problems and solutions. Compatibility can be desirable or unwanted depending on the business goals (Though we should not lie to ourself. For the customer it's usually better if the system is as compatible as possible). In the end it is important to invest thought into this quality criteria and decide on the required measures.
-
+Compatibility encompasses a variety of challenges that depend heavily on the specific application. It’s impossible to provide a general set of problems and solutions. Compatibility can be either desirable or undesirable depending on business goals (though, for customers, it's typically better if a system is as compatible with others as possible). Ultimately, it's important to invest thought into this quality criterion and decide on the necessary measures.
 
 **[<- Pervious article in this series]({% post_url swq_series/2025-01-01-002-maintainability-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-004-flexibility-traits %})** 
