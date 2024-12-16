@@ -55,7 +55,7 @@ Software patterns are a significant resource for improving maintainability. Some
 1. **Quality Criteria Alignment**: Patterns often consider software quality criteria or balance competing concerns based on their use case.
 2. **Recognizable Concepts**: Introducing well-known patterns into software increases the likelihood that other developers will recognize and understand them, provided they are properly implemented.
 
-While some developers consider using patterns outdated, this perspective overlooks their ongoing relevance in frameworks such as Spring and Qt. For example, Qt’s signal-and-slot mechanism is an advanced implementation of the observer pattern, as are many modern frameworks’ binding mechanisms. Java’s Spring Boot framework could be considered the definition of Dependency Injection. In this environment usually realized using Java reflections.
+While some developers consider using patterns outdated, this perspective overlooks their ongoing relevance in frameworks such as [Spring](https://spring.io) and [Qt](https://www.qt.io). For example, Qt’s signal-and-slot mechanism is an advanced implementation of the observer pattern, as are many modern frameworks’ binding mechanisms. Java’s [Spring Boot](https://spring.io/projects/spring-boot) framework could be considered the definition of Dependency Injection. In this environment usually realized using Java reflections.
 
 ### Understanding Patterns and Frameworks
 
