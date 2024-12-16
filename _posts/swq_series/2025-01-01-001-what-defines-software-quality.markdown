@@ -68,3 +68,4 @@ In following articles, we will take a closer look at the individual criteria and
 - [Maintainability]({% post_url swq_series/2025-01-01-002-maintainability-traits %})
 - [Compatibility]({% post_url swq_series/2025-01-01-003-compatibility-traits %})
 - [Flexibility]({% post_url swq_series/2025-01-01-004-flexibility-traits %})
+- [Functional Suitabilty]({% post_url swq_series/2025-01-01-005-functionality-traits %})
