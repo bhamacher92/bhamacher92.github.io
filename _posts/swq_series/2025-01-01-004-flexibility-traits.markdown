@@ -49,7 +49,7 @@ However, while Rosetta translates binaries once to make them compatible, Prism a
 
 ### Handling Multiple Operating Systems
 
-Today, Docker is available on all operating systems, but it runs natively only on Linux. Windows and macOS require a virtual machine to use Docker, which can be a reasonable approach depending on the application. However, for consumer desktop software or high-performance computing, this is often unacceptable.
+Today, [Docker](https://www.docker.com) is available on all operating systems, but it runs natively only on Linux. Windows and macOS require a virtual machine to use Docker, which can be a reasonable approach depending on the application. However, for consumer desktop software or high-performance computing, this is often unacceptable.
 
 Linux has offered [Wine](https://wiki.ubuntuusers.de/Wine/) as a solution to run Windows applications for some time now. In my experience, Wine is unstable and not very user-friendly. However, Valve, building on Wine, developed [Proton](https://en.wikipedia.org/wiki/Proton_(software)) for its Steam Deck. As an integrated solution, Proton is stable and performs well, making it a viable option for gaming and related use cases.
 
