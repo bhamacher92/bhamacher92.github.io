@@ -33,7 +33,7 @@ The degree of effectiveness and efficiency with which test criteria can be estab
 
 ## How to Improve Maintainability
 
-Maintainability is not primarily about enhancing the product from a business perspective but about empowering developers to make changes efficiently and confidently. Clean code, as described by Robert C. Martin in his book *Clean Code*, is one of the foundational pillars of maintainability. However, even well-readable code can be challenging to navigate when systems introduce excessive complexity. Reducing complexity should, therefore, be a key goal. A good starting point is adhering to the SOLID principles:
+Maintainability is not primarily about enhancing the product from a business perspective but about empowering developers to make changes efficiently and confidently. Clean code, as described by Robert C. Martin in his book *[Clean Code](https://www.mitp.de/IT-WEB/Programmierung/Clean-Code.html)*, is one of the foundational pillars of maintainability. However, even well-readable code can be challenging to navigate when systems introduce excessive complexity. Reducing complexity should, therefore, be a key goal. A good starting point is adhering to the SOLID principles:
 
 - **S**ingle Responsibility Principle
 - **O**pen/Closed Principle
