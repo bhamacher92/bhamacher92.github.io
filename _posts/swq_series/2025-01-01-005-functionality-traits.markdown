@@ -6,7 +6,7 @@ title:  Functional Suitability Traits
 date:   2024-01-01 08:32:20 0000
 description: Just a test
 img: posts/common/QUALITY_FUNCTIONALITY.png 
-tags: [Software Quality]
+tags: [Software Quality Series]
 author: Bastian Hamacher
 github:  bhamacher92
 mathjax: no
