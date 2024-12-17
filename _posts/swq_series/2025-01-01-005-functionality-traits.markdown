@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Functional Suitability Traits
 date:   2024-01-01 08:32:20 0000
-description: Just a test
+description: ISO/IEC 25010 Suitability Traits
 img: posts/common/QUALITY_FUNCTIONALITY.png 
 tags: [Software Quality Series]
 author: Bastian Hamacher
@@ -40,4 +40,4 @@ Bringing Product Owners and Developers into closer collaboration is crucial for 
 Functional suitability is a cornerstone of software quality, encompassing the complementary attributes of completeness, correctness, and appropriateness. In my opinion achieving high functional suitability means balancing these attributes within the dynamic context of user needs, project goals, and regulatory constraints. Agile methodologies and collaborative practices like ATDD and BDD provide the mechanisms to adapt functionality iteratively, ensuring the software continues to deliver value over time.  functional suitability is less about adhering to static definitions and more about evolving the software to meet the real-world demands of its users. 
 
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-004-flexibility-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-005-functionality-traits %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-004-flexibility-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-006-reliability-traits %})** 

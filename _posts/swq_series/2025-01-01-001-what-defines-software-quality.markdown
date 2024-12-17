@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  What Defines Software Quality?
 date:   2024-01-01 08:32:20 0000
-description: Just a test
+description: ISO/IEC 25010
 img: posts/common/SOFTWARE_QUALITY.png 
 tags: [Software Quality Series]
 author: Bastian Hamacher
@@ -69,3 +69,4 @@ In following articles, we will take a closer look at the individual criteria and
 - [Compatibility]({% post_url swq_series/2025-01-01-003-compatibility-traits %})
 - [Flexibility]({% post_url swq_series/2025-01-01-004-flexibility-traits %})
 - [Functional Suitabilty]({% post_url swq_series/2025-01-01-005-functionality-traits %})
+- [Reliability]({% post_url swq_series/2025-01-01-006-reliability-traits %})

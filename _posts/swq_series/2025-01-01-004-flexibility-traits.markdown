@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Flexibility Traits
 date:   2024-01-01 08:32:20 0000
-description: Just a test
+description: ISO/IEC 25010 Flexibility Traits
 img: posts/common/QUALITY_PORTABILITY.png 
 tags: [Software Quality Series]
 author: Bastian Hamacher
