@@ -70,3 +70,4 @@ In following articles, we will take a closer look at the individual criteria and
 - [Flexibility]({% post_url swq_series/2025-01-01-004-flexibility-traits %})
 - [Functional Suitabilty]({% post_url swq_series/2025-01-01-005-functionality-traits %})
 - [Reliability]({% post_url swq_series/2025-01-01-006-reliability-traits %})
+- [Performance Efficiency]({% post_url swq_series/2025-01-01-007-performance-traits %})

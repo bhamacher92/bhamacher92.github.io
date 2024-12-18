@@ -114,4 +114,4 @@ catch(Exception e) {
 
 The key to reliability lies in ensuring faultlessness, availability, fault tolerance, and recoverability. Together, these attributes provide the foundation for building reliable systems that meet user expectations and business goals. By improving MTBF, minimizing MTTR, and adopting design strategies like redundancy and graceful degradation, software systems can achieve high reliability and maintain operational continuity even under challenging conditions. 
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-005-functionality-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-006-reliability-traits %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-005-functionality-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-007-performance-traits %})** 
