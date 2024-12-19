@@ -118,3 +118,5 @@ Improving interaction capability depends on the specific application. However, t
 Interaction capability, as defined by ISO/IEC 25010, prioritizes clarity, inclusivity, and user-friendliness.
 By integrating these principles into software design, developers can create solutions 
 that are not only functional but also enjoyable and accessible, fostering long-term user satisfaction and success.  
+
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-007-performance-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-008-interaction-capability-traits %})** 
