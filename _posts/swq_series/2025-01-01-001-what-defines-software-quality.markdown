@@ -18,7 +18,7 @@ But is maintainability truly the highest goal in software development? The answe
 
 Consider banks, for example. For them, **security** is paramount. Since their business revolves around money, losing it due to poor security would be catastrophic. For banks, trust is everything; any breach of security could shatter customer confidence, who might start to withdraw their money.
 
-These examples illustrate that different business contexts prioritize different quality criteria. To help navigate this complexity, standards like **ISO/IEC 25010** define nine key software quality criteria.
+These examples illustrate that different business contexts prioritize different quality criteria. To help navigate this complexity, standards like **[ISO/IEC 25010](https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-2:v1:en:term:3.4)** define nine key software quality criteria.
 
 ![Table Quality Criteria (Source: https://iso25000.com)](assets/img/posts/20250101/iso_25010_en.png)[Source: https://iso25000.com]
 
