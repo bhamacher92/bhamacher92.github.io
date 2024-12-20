@@ -15,81 +15,67 @@ mathjax: yes
 *This article is part of the Software Quality series. If you haven’t read the introductory article,
 you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** identifies security as one of the nine essential quality attributes for software. 
-This attribute is further divided into six sub-traits:  
+**ISO/IEC 25010** identifies security as one of the nine essential quality attributes for software. This attribute is further divided into six sub-traits:  
 
 ### Confidentiality
 
-Degree to which a product or system ensures that data are accessible only to those authorized to have access.
+The degree to which a product or system ensures that data is accessible only to those authorized to have access.
 
-Many companies define Roles. Each Role has certain competences attached to it. It's often required to ensure that
-roles can only execute actions within its competences. 
+Many companies define roles, with each role having specific competencies attached. It's crucial to ensure that roles are restricted to executing actions only within their competencies.
 
-### Integrity 
+### Integrity
 
-Degree to which a system, product or component ensures that the state of its system and data are protected from unauthorized modification or deletion either by malicious action or computer error.
+The degree to which a system, product, or component protects the state of its system and data from unauthorized modification or deletion, whether caused by malicious actions or errors.
 
-One major threat data need more and more protection against is a [ransomware](https://en.wikipedia.org/wiki/Ransomware). Ransomware encrypts data. Its goals is not to steal but to blackmail companies to pay 
-a ransom for decryption. But not all thread are malicious. A defect hard drive can render data just as useless 
-as an attack.
+One growing threat to data integrity is [ransomware](https://en.wikipedia.org/wiki/Ransomware), which encrypts data to extort ransom for decryption. However, threats are not always malicious—a defective hard drive can render data equally unusable.
 
-### Non-repudiation 
+### Non-repudiation
 
-Degree to which actions or events can be proven to have taken place so that the events or actions cannot be repudiated later.
+The degree to which actions or events can be proven to have occurred, ensuring that they cannot later be denied.
 
-Many actions have legal consequences and it is mandatory to proof who is responsible for certain actions.
-When it comes to legal actions this attribute is tightly coupled Confidentiality, since the question will be
-asked should the responsible person have had access to this part of the system and is liable.
-Maybe it's required to find out if any person was involved at all or if was a technical error.
-A blackbox aviation is often used to comprehend what happened.
+Many actions have legal implications, requiring proof of accountability. This attribute often aligns closely with confidentiality, as questions arise about whether the responsible person should have had access to specific parts of the system. In some cases, determining whether a person was involved at all—or whether a technical error occurred—is critical. For instance, black box data in aviation is used to reconstruct events.
 
 ### Accountability
 
-Degree to which the actions of an entity can be traced uniquely to the entity.
+The degree to which an entity's actions can be uniquely traced back to it.
 
 ### Authenticity
 
-Degree to which the identity of a subject or resource can be proved to be the one claimed.
+The degree to which the identity of a subject or resource can be proven as claimed.
 
-While confidentiality ensures that a user(can also be a technical system) is authorized to do something,
-authenticity describes that the user is actually who it claims to be and how certain the system can 
-be about that claim.
+While confidentiality ensures that a user (or system) is authorized, authenticity verifies that the user is genuinely who they claim to be and assesses the certainty of that verification.
 
-### Resistance 
+### Resistance
 
-Degree to which the product or system sustains operations while under attack from a malicious actor.
+The degree to which the product or system continues operating while under attack from malicious actors.
 
-One of the major tools for cyber criminals are [Distributed Denial of Service (DDoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack) attacks. A DDoS attack roots to put system under stress until it is unavailable.
-Resistance against those kind of attacks is of major importance because unavailable services can turn off whole businesses. 
+A common form of attack is the [Distributed Denial of Service (DDoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack, which overwhelms systems to make them unavailable. Building resistance to such attacks is vital, as service unavailability can disrupt entire businesses.
 
 ## How to Improve Security
-[ISO 27001](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:27001:ed-3:v1:en) defines a process to improve security 
-in companies. Following this process is essential part to improve cybersecurity. 
 
-[ISO 27002](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:27002:ed-3:v2:en) describes practical applicable measures once sensitive systems are identified and a hazard analysis was performed. A few common methods(Not all part of the norm) will be explained here. In the end the required actions largely depend on the specific application.
+[ISO 27001](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:27001:ed-3:v1:en) outlines a process to improve security in organizations, forming a cornerstone of cybersecurity strategies. In Germany, the new [DigiG](https://www.recht.bund.de/bgbl/1/2024/101/VO.html) mandates that the health industry comply with these standards starting in July 2025. It can be expected that other sectors handling sensitive data will follow sooner or later.  
+
+[ISO 27002](https://www.iso.org/obp/ui/en/#iso:std:iso-iec:27002:ed-3:v2:en) provides actionable measures after sensitive systems are identified and hazard analyses are performed. Below are several common methods (not all part of the standard) for enhancing security. Ultimately, required actions depend on the specific application.
 
 1. **Mirror roles in your software**  
-    It's useful to understand authorization and authentication as two different domains. Authorization should be based on roles. These roles are defined as part of the business logic. It can be useful to mirror available actions to a specific role in the API. A practical way to do so in web applications is for instance a [Hypermedia as the Engine of Application State (HATEOAS)](https://de.wikipedia.org/wiki/HATEOAS) api.
+   Authorization and authentication should be treated as separate domains. Authorization is role-based, with roles defined as part of business logic. Mirroring available actions to specific roles in the API can be effective. A practical example in web applications is using a [Hypermedia as the Engine of Application State (HATEOAS)](https://de.wikipedia.org/wiki/HATEOAS) API.
 
-2. **Use secure login mechanism**  
-    Roles defined in the businesslogic can be mirrored in the authentication context. A user can have one or multiple roles. Identity and Access Management software like [Keycloak](https://www.keycloak.org) provides such features out of the box. It's usually possible to choose between multiple login methods. Using a method with more than one factor should be the preferred option.
+2. **Use secure login mechanisms**  
+   Roles defined in the business logic can integrate within the authentication context. Users can have one or multiple roles. Identity and Access Management tools like [Keycloak](https://www.keycloak.org) support this out of the box. Multi-factor authentication should be the preferred login method.
 
-3. **Use logging**  
-    How to implement logging best depends on the system architecture. A common approach is to implement event driven systems. In these systems publisher subscriber systems are required. Combining such a message based system with [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html). Event Sourcing persists events(messages) in 
-    a hopefully readonly manner and can satisfy Non-repudiation and Accountability requirements. If the system is distributed software like [Kafka](https://kafka.apache.org) provides publisher subscriber features combined with Event Sourcing out of th box.
+3. **Implement logging**  
+   Logging requirements depend on system architecture. Event-driven systems often utilize publisher-subscriber mechanisms combined with [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html). Event Sourcing records events immutably, meeting non-repudiation and accountability needs. For distributed systems, tools like [Kafka](https://kafka.apache.org) provide such capabilities.
 
 4. **Limit requests**  
-    Protecting systems against attacks from outside or inside has so many facets to cover the it is impossible cover an at all meaningfull protion of this domain. A representative a usually easy to implement method is to implement 
-    traffic policies. Tools like [Traefik](https://traefik.io/traefik/) allow to do so out of the box. Cloud services provide similar features. An example is AWS with Route 53. Limiting requests protects services from overload and
-    implement basic protection against DDoS attacks.
+   Protecting systems from both external and internal attacks encompasses so many facets that it is nearly impossible to address a meaningful portion of this domain comprehensively. A representative and relatively easy-to-implement approach is the use of traffic policies.
+   Request limiting is a straightforward yet effective way to protect systems from overload and DDoS attacks. Tools like [Traefik](https://traefik.io/traefik/) offer such features, cloud providers like AWS with Route 53 offer traffic management as well.  
 
-5. **Check platform compliance**
-    When using cloud services it's important not only to take the own software into consideration but also 
-    to check the service provider compliance. Compliances will differ depending on the used services and their 
-    hosting regions. Most cloud providers provide extensive documentation or even tool on this topic.
+5. **Check platform compliance**  
+   When using cloud services, it’s essential to evaluate both your software and your service provider’s compliance. Compliance varies by service and hosting region. Many cloud providers offer extensive documentation and tools to help assess compliance:  
 
-    - [AWS C5 Compliance](https://aws.amazon.com/compliance/bsi-c5/)
-    - [Azure Compliance Manager](https://www.microsoft.com/en-us/security)
-
+    - [AWS C5 Compliance](https://aws.amazon.com/compliance/bsi-c5/)  
+    - [Azure Compliance Manager](https://www.microsoft.com/en-us/security)  
 
 ## Conclusion
+
+Security is a critical aspect of software quality, directly affecting data protection, system reliability, and user trust. The principles outlined in ISO standards like 25010, 27001, and 27002 provide structured approaches to addressing security challenges. By adopting role-based access, secure login mechanisms, logging, traffic control, and compliance checks, organizations can enhance their security. For certain software prioritizing security is not only a technical necessity but also a fundamental business responsibility in today’s digital landscape.
