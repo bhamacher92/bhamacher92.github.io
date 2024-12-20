@@ -6,7 +6,7 @@ title:  Security Traits
 date:   2024-01-01 08:32:20 0000
 description: ISO/IEC 25010 Security Traits
 img: posts/common/QUALITY_SECURITY.png 
-tags: [Software Quality Series, Test]
+tags: [Software Quality Series]
 author: Bastian Hamacher
 github:  bhamacher92
 mathjax: yes
