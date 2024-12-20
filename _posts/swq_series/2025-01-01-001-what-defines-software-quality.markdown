@@ -72,4 +72,5 @@ In following articles, we will take a closer look at the individual criteria and
 - [Reliability]({% post_url swq_series/2025-01-01-006-reliability-traits %})
 - [Performance Efficiency]({% post_url swq_series/2025-01-01-007-performance-traits %})
 - [Interaction Capability]({% post_url swq_series/2025-01-01-008-interaction-capability-traits %})
+- [Security]({% post_url swq_series/2025-01-01-009-security-traits %})
 
