@@ -80,4 +80,4 @@ A common form of attack is the [Distributed Denial of Service (DDoS)](https://en
 
 Security is a critical aspect of software quality, directly affecting data protection, system reliability, and user trust. The principles outlined in ISO standards like 25010, 27001, and 27002 provide structured approaches to addressing security challenges. By adopting role-based access, secure login mechanisms, logging, traffic control, and compliance checks, organizations can enhance their security. For certain software prioritizing security is not only a technical necessity but also a fundamental business responsibility in today’s digital landscape.
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-008-interaction-capability-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-009-security-traits %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-008-interaction-capability-traits %})**      **[Next article in this series->]({% post_url swq_series/2025-01-01-010-safety-traits %})** 

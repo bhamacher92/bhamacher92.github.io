@@ -96,4 +96,13 @@ Safety, like security, is a domain requiring specialized expertise. Designing sa
 ## Conclusion
 Achieving software safety requires deliberate planning, adherence to standards like ISO/IEC 25010 and IEC 61508, and the expertise of domain professionals. Safety is about reducing risk to acceptable levels through comprehensive hazard analysis, well-defined requirements, and tailored measures.  
 
-Building safe systems demands collaboration with experts to ensure compliance and address specific challenges. With robust design practices, we can develop reliable, resilient, and trustworthy software systems.  
+Building safe systems demands collaboration with experts to ensure compliance and address specific challenges. With robust design practices, we can develop reliable, resilient, and trustworthy software systems.
+
+### Where to go from here
+
+This concludes the current iteration of the Software Quality series. The upcoming Application Architecture series will explore different architectural styles, highlight effective patterns, and provide guidance on making informed decisions tailored to the specific quality needs of your application.
+
+- [Software Quality Series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %})
+- Application Architecture Series (coming soon)
+
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-009-security-traits %})** 
