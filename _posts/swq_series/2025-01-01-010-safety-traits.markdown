@@ -67,8 +67,8 @@ Please keep in mind that equally to security safety is a field many people spend
 will end in inevitable failure.
 However, for better understanding below are some helpful information how to indentify need for measures and what potential measures are provided by IEC 61508-7.
 
-### The safety-lifecycle
-1. **Finding the Hazard**
+### Identifying safety Requirements
+- **Finding Hazards**  
     Once the system is described it's possible to determine hazards. These hazards are expressed in severity levels and likelihood. Part of the hazard analysis is to determine critical system path. A critical path describes all system components that can trigger a hazardous failure. A common approach to bring these things together and determine where measures must be taken is a [Failure Modes and Effects Analysis (FMEA)](https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis).
 
     The following example shows severity categories:
@@ -80,9 +80,7 @@ However, for better understanding below are some helpful information how to inde
 <sub>[Table Source: versatec](https://versatec.nl/wp-content/uploads/2018/12/SIL-Platform-Risk-Matrix-Guide-Oct2018-Final-LR-1.pdf)</sub>
 
   
-
-
-2. **Define System Safety Requirements**
+- **Define System Safety Requirements**  
     Depending on the system safety requirements measures have to be taken to reduce risk to an acceptable level.
     The table below maps risk to [Safety Integration Levels (SIL)](https://en.wikipedia.org/wiki/Safety_integrity_level). SIL defines a risk reduction factor. SIL dictates where and to what extend measures are 
     required.
@@ -91,16 +89,34 @@ However, for better understanding below are some helpful information how to inde
 |----------------------------------|:-----------------------------------------:|:--------------------------------:|:-----------------------------------:|:----------------------------------:|:---------------------------------------:|
 | <sub>**7:**  > 1</sub>             | <sub>SIL 3</sub>                          | <sub>X</sub>                     | <sub>X</sub>                        | <sub>X</sub>                       | <sub>X</sub>                            |
 | <sub>**6:**  ($10^{-1}$ - 1)**</sub>   | <sub>SIL 2</sub>                          | <sub>SIL 3</sub>                 | <sub>X</sub>                        | <sub>X</sub>                       | <sub>X</sub>                            |
-| <sub>**5:**  ($10^{-2}$ - $10^{-1}$) </sub>   | <sub>SIL 1</sub>                          | <sub>SIL 2</sub>                 | <sub>SIL 3</sub>                    | <sub>X</sub>                       | <sub>X</sub>                            |
-| <sub>**4:**  ($10^{-3}$ - $10^{-2}$) </sub>  | <sub>-</sub>                              | <sub>SIL 1</sub>                 | <sub>SIL 2</sub>                    | <sub>SIL 3</sub>                   | <sub>X</sub>                            |
-| <sub>**3:**  ($10^{-4}$ - $10^{-3}$) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>SIL 1</sub>                    | <sub>SIL 2/3</sub>                 | <sub>SIL 3</sub>                        |
-| <sub>**2:**  ($10^{-5}$ - $10^{-4}$) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>-</sub>                        | <sub>SIL 1/2</sub>                 | <sub>SIL 2</sub>                        |
-| <sub>**1:**  ($10^{-6}$ - $10^{-5}$) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>-</sub>                        | <sub>SIL 1</sub>                   | <sub>SIL 1</sub>                        |
+| <sub>**5:**  ($10^{-2}$ - $10^{-1}$ ) </sub>   | <sub>SIL 1</sub>                          | <sub>SIL 2</sub>                 | <sub>SIL 3</sub>                    | <sub>X</sub>                       | <sub>X</sub>                            |
+| <sub>**4:**  ($10^{-3}$ - $10^{-2}$ ) </sub>  | <sub>-</sub>                              | <sub>SIL 1</sub>                 | <sub>SIL 2</sub>                    | <sub>SIL 3</sub>                   | <sub>X</sub>                            |
+| <sub>**3:**  ($10^{-4}$ - $10^{-3}$ ) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>SIL 1</sub>                    | <sub>SIL 2/3</sub>                 | <sub>SIL 3</sub>                        |
+| <sub>**2:**  ($10^{-5}$ - $10^{-4}$ ) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>-</sub>                        | <sub>SIL 1/2</sub>                 | <sub>SIL 2</sub>                        |
+| <sub>**1:**  ($10^{-6}$ - $10^{-5}$ ) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>-</sub>                        | <sub>SIL 1</sub>                   | <sub>SIL 1</sub>                        |
 
 <sub>[Table Source: versatec](https://versatec.nl/wp-content/uploads/2018/12/SIL-Platform-Risk-Matrix-Guide-Oct2018-Final-LR-1.pdf)</sub>
 
 ### Common Measures
+IEc 61508-3 and IEC 61508-7 defines measures and their fitness for SIL levels related to software.
 
+
+1. **Pick the right technology**
+Depending on the use case it's important to pick the right programming languages and compilers. Using interpreted languages for example 
+would require proof that the interpreter itself satisfies all safety requirements. Therefore using native static typed languages like a 
+enforced subset of C++ or Rust is required. Make sure to use certified compilers like [Ferrocene](https://ferrocene.dev/de/#:~:text=Ferrocene%20is%20ready%2Dto%2Duse%20Rust%20for%20embedded%20systems.&text=Rust%20is%20built%20for%20speed,developers%20take%20advantage%20of%20that.).
+
+2. **Restrict Resources**
+Software is rarely alone. In most scenarios software components run on the same node or even in the same application(Multithreading). Limiting resources for individual resources 
+can be helpful to mitigate. For instance memory pools can prevent memory leaks from affection other processes on the same node.
+
+3. **Use error detection methods**
+It's impossible to create 100% reliable systems. Therefore it's important to implement error detection. Methods like [N-Version programming](https://en.wikipedia.org/wiki/N-version_programming) or [Watchdogs](https://en.wikipedia.org/wiki/Watchdog_timer) are suitable methods.
+
+4. **Keep the System stable**
+Once on error is detected the system should transferred into stable condition. For example, if a memory pool is exhausted caused by a memory leak restarting the system can solve the problem.
+Retry strategies like this are imaginable in many different contexts. If a retry is not suitable implementing step by step functional limitation like [Recovery Blocks](https://en.wikipedia.org/wiki/Exception_handling) to keep the system stable 
+can be a good alternative. 
 
 
 ## Conclusion
