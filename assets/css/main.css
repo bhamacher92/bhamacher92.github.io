@@ -443,13 +443,50 @@ a:hover{
 }
 table {
       border-left: 6px solid var(--accent);
+      overflow-x: auto;
 }
 table td, table th {
     border: 0;
     padding: 12px;
     text-align: left;
     background-color: var(--grey5);
+    overflow-x: auto;
 }
+
+/*
+Start Custom Table Container 
+ */
+
+ .table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5em; /* Add some spacing after tables */
+}
+
+/* Optional: Style the table */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/*
+End Custom Table Container
+*/
+
+
+
 blockquote {
     border-left: 10px solid var(--grey4);
     padding-left: 1em;

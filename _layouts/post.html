@@ -29,7 +29,9 @@ layout: default
         {% include sidebar.html context="post" class="side" id="sidebar" %}
         {% if page.toc %}{% include sidebar-toc.html %}{% endif %}
         {% include github-button.html %}
-        {{page.content | markdownify}}
+        <div class="content">
+          {{ page.content | markdownify | replace: "<table>", '<div class="table-container"><table>' | replace: "</table>", '</table></div>' }}
+        </div>
         {% include sidebar.html context="post" class="inline" id="post-end" %}
         <div class="separator"></div>
         {% include author-box.html %}
@@ -47,3 +49,4 @@ layout: default
   {% include search.html %}
   {% include footer.html %}
 </div>
+

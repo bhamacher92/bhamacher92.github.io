@@ -73,6 +73,9 @@ compress_html:
   comments: all
   startings: [html, head, body]
 
+kramdown:
+  parse_block_html: true
+
 # Outputting
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
