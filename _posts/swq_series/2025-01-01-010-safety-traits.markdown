@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Safety Traits
 date:   2024-12-22 08:32:20 0000
-description: ISO/IEC 25010 Security Traits
+description: ISO/IEC 25010 Safety Traits
 img: posts/common/QUALITY_SAFETY.png 
 tags: [Software Quality Series]
 author: Bastian Hamacher
