@@ -75,3 +75,4 @@ In following articles, we will take a closer look at the individual criteria and
 - [Security]({% post_url swq_series/2025-01-01-009-security-traits %})
 - [Safety]({% post_url swq_series/2025-01-01-010-safety-traits %})
 
+**[Next article in this series->]({% post_url swq_series/2025-01-01-002-maintainability-traits %})**
