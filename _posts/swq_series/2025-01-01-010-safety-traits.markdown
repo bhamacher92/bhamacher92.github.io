@@ -16,7 +16,7 @@ mathjax: yes
 you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
 **ISO/IEC 25010** defines safety, one of the nine software quality traits, as 
-the degree to which a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.
+the degree to which a product under defined conditions avoids a state in which human life, health, property, or the environment is endangered.
 It further breaks down safety into five sub-traits: 
 
 ### Operational Constraint
