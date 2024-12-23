@@ -14,7 +14,9 @@ mathjax: yes
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines maintainability as one of the nine key quality attributes for software. It further breaks down maintainability into five sub-traits:
+**ISO/IEC 25010** defines maintainability, one of the nine software quality traits, as 
+the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. 
+It further breaks down maintainability into five sub-traits:
 
 ### Modularity
 The degree to which a system or computer program is composed of discrete components such that a change to one component has minimal impact on other components.

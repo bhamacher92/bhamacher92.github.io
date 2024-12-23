@@ -15,7 +15,9 @@ mathjax: yes
 *This article is part of the Software Quality series. If you haven’t read the introductory article,
 you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines safety as one of the nine essential quality attributes for software. This attribute is further divided into five sub-traits:  
+**ISO/IEC 25010** defines safety, one of the nine software quality traits, as 
+the degree to which a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.
+It further breaks down safety into five sub-traits: 
 
 ### Operational Constraint
 Degree to which a product or system constrains its operation to within safe parameters or states when encountering operational hazard.
@@ -69,7 +71,7 @@ Safety, like security, is a domain requiring specialized expertise. Designing sa
 | <sub>**Likelihood**</sub>        | <sub>**1 <br> Negligible**</sub>          |<sub> **2 <br> Minor**  </sub>    | <sub>**3 <br> Moderate**  </sub>    | <sub> **4 <br> Major**  </sub>     | <sub> **5 <br> Catastrophic** </sub>    |
 |----------------------------------|:-----------------------------------------:|:--------------------------------:|:-----------------------------------:|:----------------------------------:|:---------------------------------------:|
 | <sub>**7:**  > 1</sub>             | <sub>SIL 3</sub>                          | <sub>X</sub>                     | <sub>X</sub>                        | <sub>X</sub>                       | <sub>X</sub>                            |
-| <sub>**6:**  ($10^{-1}$ - 1)**</sub>   | <sub>SIL 2</sub>                          | <sub>SIL 3</sub>                 | <sub>X</sub>                        | <sub>X</sub>                       | <sub>X</sub>                            |
+| <sub>**6:**  ($10^{-1}$ - 1)</sub>   | <sub>SIL 2</sub>                          | <sub>SIL 3</sub>                 | <sub>X</sub>                        | <sub>X</sub>                       | <sub>X</sub>                            |
 | <sub>**5:**  ($10^{-2}$ - $10^{-1}$ ) </sub>   | <sub>SIL 1</sub>                          | <sub>SIL 2</sub>                 | <sub>SIL 3</sub>                    | <sub>X</sub>                       | <sub>X</sub>                            |
 | <sub>**4:**  ($10^{-3}$ - $10^{-2}$ ) </sub>  | <sub>-</sub>                              | <sub>SIL 1</sub>                 | <sub>SIL 2</sub>                    | <sub>SIL 3</sub>                   | <sub>X</sub>                            |
 | <sub>**3:**  ($10^{-4}$ - $10^{-3}$ ) </sub>  | <sub>-</sub>                              | <sub>-</sub>                     | <sub>SIL 1</sub>                    | <sub>SIL 2/3</sub>                 | <sub>SIL 3</sub>                        |
@@ -105,4 +107,4 @@ This concludes the current iteration of the Software Quality series. The upcomin
 - [Software Quality Series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %})
 - Application Architecture Series (coming soon)
 
-**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-009-security-traits %})** 
+**[<- Pervious article in this series]({% post_url swq_series/2025-01-01-009-security-traits %})**

@@ -14,7 +14,9 @@ mathjax: yes
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines compatibility as one of the nine key quality attributes for software, breaking it down into four sub-traits:
+**ISO/IEC 25010** defines flexibility, one of the nine software quality traits, as 
+the degree to which a product can be adapted to changes in its requirements, contexts of use or sys tem environment.
+It further breaks down flexibility into four sub-traits: 
 
 ### Adaptability
 Degree to which a product or system can effectively and efficiently be adapted for or transferred to different hardware, software, or other operational or usage environments.

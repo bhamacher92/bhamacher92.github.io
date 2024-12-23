@@ -15,8 +15,9 @@ mathjax: yes
 *This article is part of the Software Quality series. If you haven’t read the introductory article,
 you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** identifies interaction capability as one of the nine essential quality attributes for software. 
-This attribute is further divided into eight sub-traits:  
+**ISO/IEC 25010** defines interaction capability, one of the nine software quality traits, as 
+the degree to which a product or system can be interacted with by specified users to exchange information ia the user interface to complete specific tasks in a variety of contexts of use.
+It further breaks down interaction capability into three sub-traits: 
 *Before 2023, this attribute was referred to as usability and included some differing sub-traits now encompassed by user engagement.*
 
 ### Appropriateness Recognizability  

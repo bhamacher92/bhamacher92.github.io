@@ -14,7 +14,9 @@ mathjax: yes
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines reliability as one of the nine key quality attributes for software. It further breaks down reliability into four sub-traits:
+**ISO/IEC 25010** defines reliability, one of the nine software quality traits, as 
+the degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.
+It further breaks down reliability into four sub-traits: 
 
 ### Faultlessness 
 The degree to which a system, product, or component performs specified functions without fault under normal operation.

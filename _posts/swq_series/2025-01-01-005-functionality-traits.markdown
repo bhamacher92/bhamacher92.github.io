@@ -14,6 +14,10 @@ mathjax: no
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
+**ISO/IEC 25010** defines functional suitability, one of the nine software quality traits, as 
+the degree to which a product performs its functions within specified time and throughput parameters and is efficient in the use of resources (such as CPU, memory, storage, network devices, energy, materials...) under specified conditions.
+It further breaks down functional suitability into three sub-traits: 
+
 **ISO/IEC 25010** defines functional suitability as one of the nine key quality attributes for software. It further breaks down functional suitability into three sub-traits:
 
 ### Functional Completeness

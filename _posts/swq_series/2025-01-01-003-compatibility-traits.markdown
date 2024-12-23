@@ -15,7 +15,9 @@ mermaid: true
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article, you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
 
-**ISO/IEC 25010** defines compatibility as one of the nine key quality attributes for software, breaking it down into two sub-traits: \\
+**ISO/IEC 25010** defines compatibility, one of the nine software quality traits, as 
+the degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same common environment and resources.
+It further breaks down compatibility into two sub-traits: 
 *Compared to the last article on maintainability, the subcategories of compatibility are less intuitive, so I will explain them in more detail and not strictly adhere to the ISO/IEC 25010 definitions.*
 
 ### Co-Existence
