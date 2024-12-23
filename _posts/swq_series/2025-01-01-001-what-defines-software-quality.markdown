@@ -14,17 +14,17 @@ mathjax: yes
 
 We developers talk a lot about quality during the development process. But what does "quality" mean in the context of software? Most of us might immediately think of **maintainability**. Following the wisdom that software is never truly finished, it’s essential to keep it in a state where we can implement changes quickly without introducing new issues. This focus on maintainability is understandable, as losing control over the software means we can no longer improve or adapt it, rendering us ineffective as developers.
 
-But is maintainability truly the highest goal in software development? The answer, as always, is: *it depends*. Different domains and use cases place different emphases on quality criteria. For instance, at the company where I currently work, many believe **usability** is the most critical factor. Their reasoning is clear: software that users avoid or that complicates previously simple processes has little to no value—and sometimes even negative value.
+But is maintainability truly the highest goal in software development? The answer, as always, is: *it depends*. Different domains and use cases place different emphases on quality traits. For instance, at the company where I currently work, many believe **usability** is the most critical factor. Their reasoning is clear: software that users avoid or that complicates previously simple processes has little to no value—and sometimes even negative value.
 
 Consider banks, for example. For them, **security** is paramount. Since their business revolves around money, losing it due to poor security would be catastrophic. For banks, trust is everything; any breach of security could shatter customer confidence, who might start to withdraw their money.
 
-These examples illustrate that different business contexts prioritize different quality criteria. To help navigate this complexity, standards like **[ISO/IEC 25010](https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-2:v1:en:term:3.4)** define nine key software quality criteria.
+These examples illustrate that different business contexts prioritize different quality traits. To help navigate this complexity, standards like **[ISO/IEC 25010](https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-2:v1:en:term:3.4)** define nine key software quality traits.
 
-![Table Quality Criteria (Source: https://iso25000.com)](assets/img/posts/20250101/iso_25010_en.png)[Source: https://iso25000.com]
+![Table Quality Traits (Source: https://iso25000.com)](assets/img/posts/20250101/iso_25010_en.png)[Source: https://iso25000.com]
 
-## The Software Quality Criteria
+## The Software Quality Traits
 
-Initially, **ISO/IEC 25010** defined eight quality criteria. In 2023, an update added **safety** as an additional criterion and renamed **usability** to **interaction capability** and **portability** to **flexibility**. Below is an overview of the nine criteria:
+Initially, **ISO/IEC 25010** defined eight quality traits. In 2023, an update added **safety** as an additional trait and renamed **usability** to **interaction capability** and **portability** to **flexibility**. Below is an overview of the nine traits:
 
 ### 1. Functional Suitability 
 The degree to which the software satisfies stated or implied needs when used under specified conditions.
@@ -55,13 +55,13 @@ The capability of the software to ensure it does not endanger human health, prop
 
 ## Conclusion
 
-The **ISO/IEC 25010** framework provides a comprehensive overview of nine distinct quality criteria. At first glance, all these criteria appear equally important. However, projects rarely have the budget or resources to address them all to the same degree. It falls to developers and domain experts to determine which criteria matter most for a given project.
+The **ISO/IEC 25010** framework provides a comprehensive overview of nine distinct quality traits. At first glance, all these traits appear equally important. However, projects rarely have the budget or resources to address them all to the same degree. It falls to developers and domain experts to determine which trait matter most for a given project.
 
-For instance, **web applications** often demand higher security measures than **desktop applications**. Similarly, **business software** might tolerate lower interaction capability standards compared to **consumer-facing software**. A practical approach is to identify the **top three criteria** for your project and prioritize them. This doesn’t mean ignoring the other criteria altogether but focusing resources where they deliver the most value.
+For instance, **web applications** often demand higher security measures than **desktop applications**. Similarly, **business software** might tolerate lower interaction capability standards compared to **consumer-facing software**. A practical approach is to identify the **top three traits** for your project and prioritize them. This doesn’t mean ignoring the other traits altogether but focusing resources where they deliver the most value.
 
 Trade-offs are inevitable. A good example is **two-factor authentication**: it enhances security but can reduce interaction capability. Balancing such trade-offs is a key part of delivering high-quality software that meets the needs of both the business and its users.
 
-In following articles, we will take a closer look at the individual criteria and what they mean in more detail or go to [ISO25000](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
+In following articles, we will take a closer look at the individual traits and what they mean in more detail or go to [ISO25000](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
 
 ### Where to go from here
 
