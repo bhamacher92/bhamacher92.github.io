@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Security Traits
-date:   2024-01-01 08:32:20 0000
+date:   2024-12-22 08:32:20 0000
 description: ISO/IEC 25010 Security Traits
 img: posts/common/QUALITY_SECURITY.png 
 tags: [Software Quality Series]
@@ -14,8 +14,6 @@ mathjax: yes
 
 *This article is part of the Software Quality series. If you haven’t read the introductory article,
 you can check it out [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).*
-
-**ISO/IEC 25010** identifies security as one of the nine essential quality attributes for software. This attribute is further divided into six sub-traits:  
 
 **ISO/IEC 25010** defines security, one of the nine software quality traits, as 
 the degree to which a product or system defends against attack patterns by malicious actors and protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.

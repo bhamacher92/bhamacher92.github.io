@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Compatibility Traits
-date:   2024-01-01 08:32:20 0000
+date:   2024-12-22 08:32:20 0000
 description: ISO/IEC 25010 Compatibility Traits
 img: posts/common/QUALITY_COMPATIBILITY.png 
 tags: [Software Quality Series]

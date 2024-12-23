@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Interaction Capability Traits
-date:   2024-01-01 08:32:20 0000
+date:   2024-12-22 08:32:20 0000
 description: ISO/IEC 25010 Interaction Capability Traits 
 img: posts/common/QUALITY_USABILITY.png 
 tags: [Software Quality Series] 
