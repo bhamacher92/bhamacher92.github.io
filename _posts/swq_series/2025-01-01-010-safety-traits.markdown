@@ -105,6 +105,6 @@ Building safe systems demands collaboration with experts to ensure compliance an
 This concludes the current iteration of the Software Quality series. The upcoming Application Architecture series will explore different architectural styles, highlight effective patterns, and provide guidance on making informed decisions tailored to the specific quality needs of your application.
 
 - [Software Quality Series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %})
-- Application Architecture Series (coming soon)
+- [Application Architecture Series]({% post_url aa_series/2025-02-01-001-architecture-drivers %})
 
 **[<- Pervious article in this series]({% post_url swq_series/2025-01-01-009-security-traits %})**
