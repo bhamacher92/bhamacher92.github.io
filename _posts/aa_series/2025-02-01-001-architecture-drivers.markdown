@@ -12,15 +12,13 @@ github:  bhamacher92
 mathjax: yes
 ---
 
-
 Software architecture has multiple definitions. Provided by institutions like the [SEI](https://www.sei.cmu.edu/our-work/software-architecture/) or [IEEE](https://www.ieee.org) in [IEEE/ISO/IEC 42010](https://standards.ieee.org/ieee/42010/6846/):
 
 *Architecture: (system) fundamental concepts or properties of a system in its environment
 embodied in its elements, relationships, and in the principles of its design and evolution.*
 
-
-Therefore the [International Software Architecture Qualification Board (ISAQB)](https://www.isaqb.org/de/) has extracted the following reoccurring factors which together define 
-the architecture of a software system:
+The [International Software Architecture Qualification Board (ISAQB)](https://www.isaqb.org/de/) has identified the following recurring factors that together 
+define the architecture of a software system:
 
 - Component: Structural part or building block of systems.
 - Structure: An arrangement or interrelated elements that together perform a common task.
@@ -31,31 +29,34 @@ the architecture of a software system:
 
 ## Implicit vs Explicit Architecture
 
-Software always has an architecture, whether it's implicit or explicit. The difference between implicit architecture and explicit architecture is
-that implicit architecture is driven by concrete and current needs of developers while explicit architecture is driven by business needs.
-Software will usually always be a mixture of both.
+Software always has an architecture, whether implicit or explicit. The difference lies in the driving factors:
 
-**Implicit Architecture**
-Implicit architecture decisions are made without further thought and are just required by a current problem. [Test Driven Development (TDD)](https://www.davefarley.net/?p=220) is a method
-that improves implicit architecture decisions in a tiny scale. TDD is like a journey. When starting the development it's not clear what the code will look like. 
-But if TDD is done right it will ensure that the new block of code will satisfy all functional requirements. Since implicit architecture is not planned the rest of this 
-article will be concerned with explicit architecture.
+- **Implicit architecture** is driven by the immediate needs of developers.
+- **Explicit architecture** is driven by business needs.
 
-In my opinion TDD is a perfect method to create better code faster, but it's is not strongly focused on business goals.
+In practice, software typically exhibits a mix of both.
 
-**Explicit Architecture**
-For a business to be successful it is important that software contributes to it's business goals by making explicit decisions. I recently published the [Software Quality Series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}). It is concerned with software quality traits. The nine software quality traits
+### Implicit Architecture
+
+Implicit architectural decisions are made without extensive thought and are dictated by current problems. [Test-Driven Development (TDD)](https://www.davefarley.net/?p=220) enhances implicit architecture decisions on a small scale. TDD ensures that new code satisfies all functional requirements, although it does not strongly focus on aligning with business goals.
+
+While TDD is an excellent method to create better code faster, it primarily addresses technical, not strategic, objectives.
+
+### Explicit Architecture
+
+For a business to succeed, software must align with business goals through deliberate, explicit architectural decisions. In the [Software Quality Series]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}), I explored software quality traits, defined in ISO 25010, which can describe the value of software:
 
 - Functional suitability
 - Reliability
-- Performance efficiency
-- Usability
+- Performance Efficiency
+- Interaction Capability
 - Maintainability
 - Security
 - Compatibility
-- Portability
+- Flexibility
+- Safety
 
-defined in ISO 25010 can be used describe the value of software. Knowing these traits can help to make informed decisions, based on long and short term business priorities.
+Understanding these traits enables informed decisions based on long- and short-term business priorities.
 
 
 ## ISO 25010 Shortcomings
@@ -71,7 +72,7 @@ Therefore the ISAQB has a slightly different variation of the iron triangle, whe
 <img src="assets/img/posts/20250201/IronTriQTB.svg" alt="Iron Triangle (Quality, Time, Budget)" style="width:50%;">
 
 It's often said that you have to pick 2 of 3 in this ISAQB version of the triangle. Suggesting that  a improvement in quality will take more time or cost more.
-When quality is similar to scope that is true. Since less works takes less time and in consequence costs less money. But much more common is that quality is set equal 
+When quality is similar to scope that is true. Since less work takes less time and in consequence costs less money. But much more common is that quality is set equal 
 to maintainability. 
 
 ## There is NO trade off between speed and quality
@@ -81,10 +82,18 @@ to learn that there is no trade off between speed and quality(maintainability). 
 
 ## Aligning Business and Development
 
-These insights how quality is defined by different stakeholders allow us to perfectly aligns architecture decisions with the needs of all stakeholders and
-provides the required arguments to justify our decisions in front of other stakeholders as long as they can be mapped back to one of the here described quality traits.
-Since there is no trade off between code quality and business goals but they align perfectly well it's possible to create architectures that build bridges between departments where
-we find an abyss far to often.
+Understanding the different ways quality is defined by stakeholders enables architects to align decisions with both technical and business needs. By mapping architectural choices to quality traits, architects can justify their decisions to stakeholders effectively. Since high code quality supports business goals, well-designed architectures bridge gaps between departments, fostering collaboration instead of conflict.
 
+## Conclusion
 
+Software architecture serves as a crucial bridge between technical and business domains. By balancing architectural options, based on quality traits from ISO 25010, and business objectives like time and budget, architects can create systems that are robust, maintainable, and aligned with organizational goals. Ultimately, architecture is not just about building software but enabling sustainable growth and collaboration across stakeholders.
+
+### Where to go next
+
+Based on these here introduced drivers of technology the following this series will show available architecture decisions on different abstractions levels providing
+some guidance when to make which decision and how these decisions can affect product quality and business goals.
+
+If you have not read the software quality series yet you can check it out and gather some foundational knowledge [here]({% post_url swq_series/2025-01-01-001-what-defines-software-quality %}).
+
+**[Next article in this series->]({% post_url aa_series/2025-02-01-001-architecture-drivers %})**
 
