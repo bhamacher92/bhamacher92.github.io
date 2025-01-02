@@ -69,7 +69,7 @@ Therefore, the ISAQB proposes a slightly different variation of the iron triangl
 
 <img src="assets/img/posts/20250201/IronTriQTB.svg" alt="Iron Triangle (Quality, Time, Budget)" style="width:50%;">
 
-Discussing a triangle like this it often comes down to pick 2 and scale the third criteria. This suggests that improving quality will take more time or cost more. When quality is equated with scope, this is true. Less work takes less time and consequently costs less. However, more commonly, quality is interpreted as maintainability in this discussions drawing a misguiding picture.
+When discussing a triangle like this, the common conclusion is to prioritize two criteria and adjust the third accordingly. This implies that enhancing quality will either require more time or increase costs. If quality is equated with scope, this holds true—less work requires less time and therefore costs less. However, quality is more often interpreted as maintainability in these discussions, which can lead to a misleading perspective.
 
 ## There Is NO Trade-Off Between Speed and Quality
 
