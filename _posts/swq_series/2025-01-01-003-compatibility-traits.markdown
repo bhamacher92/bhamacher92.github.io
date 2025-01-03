@@ -46,9 +46,8 @@ The requirements for compatibility vary depending on the system, but there are c
 
 Shared dependencies can be tackled by using dependencies with concrete versions. Unlike in early versions of Windows, it's now easy to use multiple versions of the same library. Modern Windows uses [Assemblies](https://learn.microsoft.com/de-de/dotnet/standard/assembly/) to handle this issue. Linux never had this problem because it uses a simple strategy to support both concrete and canonical versions of dependencies. It provides libraries with major, minor, and patch versions, and symlinks to them as shown below. Each application can decide how precisely the version needs to match.
 
-<div class="mermaid" style="background-color: lightgray;">
+```mermaid
 graph LR
-
     libA.so.2 -->|symlink| libA.so.2.1
     libA.so.2.1 -->|symlink| libA.so.2.1.1 
     libA -->|symlink| libA.so.3
@@ -58,7 +57,8 @@ graph LR
 
     App1 -->|depends on| libA.so.3.1
     App2 -->|depends on| libA.so.3.1.0
-</div>
+````
+
 
 A more modern and powerful approach is to decouple dependencies entirely using containers. A container is an isolated environment with its own filesystem. Systems like Docker use [chroot](https://linux.die.net/man/1/chroot) to create isolated artificial filesystems and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html) for process isolation. This prevents conflicts by completely separating applications and their files. However, this approach is not suitable for all environments, as it only works natively on Linux systems and can add complexity, particularly for GUI applications.
 

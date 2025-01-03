@@ -335,12 +335,19 @@
 {% endif %}
 
 {%- if site.extensions.mermaid_enable and page.mermaid -%}  
-  <script type="text/javascript" src="/assets/js/mermaid.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
   <script type="text/javascript">
     (function () {
       var config = {
         startOnLoad: true,
-        darkMode: true
+        darkMode: true,
+        theme: 'base',
+        themeVariables: {
+          primaryColor: '#879DAB',
+          lineColor: '#879DAB',
+          secondaryColor: '#FFFFFF',
+          tertiaryColor: '#FFFFFF'
+    }
       };
       mermaid.initialize(config);
       window.mermaid.init(undefined, document.querySelectorAll('pre code.language-mermaid'));
